@@ -1,0 +1,154 @@
+.content-zone {
+  $b: &;
+
+  h1, h2, h3, h4, h5, h6 {
+    max-width: 1040px;
+
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    font-size: rem(26);
+    line-height: 1.4;
+  }
+
+  p {
+    max-width: 1040px;
+    font-size: rem(15);
+    line-height: 1.333;
+
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+
+    small {
+      display: block;
+      font-size: 12px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    
+    + p {
+      margin-top: 12px !important;
+    }
+  }
+
+  a {
+    color: $brand;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  blockquote {
+    padding-left: 40px;
+    border-left: 2px solid black;
+    display: block;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  > ul, > ol {
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  ul, ol {
+    font-size: 14px;
+    line-height: 1.5;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    li {
+      padding-left: 20px;
+      position: relative;
+    }
+  }
+
+  ul {
+
+    li {
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '•';
+      }
+    }
+  }
+
+  ol {
+    counter-reset: list1;
+
+    li {
+
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        counter-increment: list1;
+        content: counter(list1) '.';
+      }
+    }
+  }
+}
+
+
+.content-zone--home {
+  margin-bottom: 32px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    &:first-child {
+
+      @media (min-width: 62em) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+
+.content-zone--desc {
+  margin-bottom: 56px;
+}

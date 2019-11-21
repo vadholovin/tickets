@@ -1,0 +1,32 @@
+-
+  var files = [
+    {
+      text: `Полное описание системы`,
+    },
+    {
+      text: `Лицензионное соглашение  на использование программы`,
+    },
+    {
+      text: `Обработка на управляемых формах,  подключающаяся к демо серверу`,
+    },
+    {
+      text: `Название четвертого документа`,
+    },
+    {
+      text: `Название пятого документа`,
+    },
+  ];
+
+.files
+  .container
+    h2.title.title--files Файлы для скачивания
+    .files-list
+      each item, index in files
+        a.files-list__item(
+          href="#",
+          target="_blank"
+        )
+          span.icon.icon-file
+          .files-list__text
+            span.link-dashed= item.text
+

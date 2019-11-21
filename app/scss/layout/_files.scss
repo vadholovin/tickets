@@ -1,0 +1,57 @@
+/* ==========================================================================
+   #FILES
+   ========================================================================== */
+
+.files-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 30px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 10px;
+  }
+}
+
+.files-list > * {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 36em) {
+    width: 50%;
+  }
+
+  @media (min-width: 62em) {
+    width: 33.333333%;
+  }
+}
+
+.files-list__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+
+  @media (min-width: 62em) {
+    margin-bottom: 60px;
+  }
+
+  .icon {
+    flex: none;
+    margin-right: 20px;
+  }
+}
+
+.files-list__text {
+  display: inline-block;
+  padding-top: 8px;
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: 1.375;
+  border-color: #cacaca;
+
+  @media (min-width: 62em) {
+    padding-top: 12px;
+  }
+}

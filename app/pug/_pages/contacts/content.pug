@@ -1,0 +1,67 @@
+.contacts
+  .container
+    .contacts__grid
+      .contacts__cell.contacts__cell--left
+        .title.title--contacts Адреса и телефоны:
+        ul.contacts-list.contacts-list--contacts
+          li.contacts-list__item
+            p.contacts-list__label Телефоны:
+            p.contacts-list__value
+              a(href="tel:+79171090171") +7 (917) 109-01-71
+              a(href="tel:+78462334236") +7 (846) 233-42-36
+          li.contacts-list__item
+            p.contacts-list__label E-mail:
+            p.contacts-list__value
+              a(href="mailto:support@tickets.com.ru") support@tickets.com.ru
+          li.contacts-list__item
+            p.contacts-list__label Skype:
+            p.contacts-list__value
+              a(href="#") @testname
+          li.contacts-list__item
+            p.contacts-list__label Адрес:
+            p.contacts-list__value
+              | 446870, Самарская обл, Елховский р-н,
+              br
+              | Елховка с, Автозаводская ул, дом No 17, кв.1
+
+      .contacts__cell.contacts__cell--right
+        .title.title--contacts Реквизиты:
+        .contacts__inner-grid
+          .contacts__inner-cell
+            ul.contacts-list.contacts-list--requisites
+              li.contacts-list__item
+                p.contacts-list__label Наименование:
+                p.contacts-list__value ИП Пахомова Елена Владимировна
+              li.contacts-list__item
+                p.contacts-list__label ОГРНИП:
+                p.contacts-list__value 310631835800022
+              li.contacts-list__item
+                p.contacts-list__label Расчетный счет:
+                p.contacts-list__value 40802810771110000038
+              li.contacts-list__item
+                p.contacts-list__label БИК:
+                p.contacts-list__value 044525092
+              li.contacts-list__item
+                p.contacts-list__label Свидетельство:
+                p.contacts-list__value 63 No005326349 от 24.12.2010
+
+          .contacts__inner-cell
+            ul.contacts-list.contacts-list--requisites
+              li.contacts-list__item
+                p.contacts-list__label ИНН:
+                p.contacts-list__value 631811795764
+              li.contacts-list__item
+                p.contacts-list__label ОКПО:
+                p.contacts-list__value 174769016
+              li.contacts-list__item
+                p.contacts-list__label Банк:
+                p.contacts-list__value
+                  | МОСКОВСКИЙ ФИЛИАЛ АО
+                  br
+                  | КБ "МОДУЛЬБАНК"
+              li.contacts-list__item
+                p.contacts-list__label Корр. счет:
+                p.contacts-list__value 30101810645250000092
+
+    .contacts-map#map
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8e172ee78ba3fac570742f428a95c2d85fe6167830cdc7f0e039a10212015867&amp;width=100%25&amp;height=390&amp;lang=ru_UA&amp;scroll=true"></script>

@@ -1,0 +1,57 @@
+/*------------------------------------*\
+  #BUTTON
+\*------------------------------------*/
+
+.button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: top;
+  user-select: none;
+  border: 0;
+  padding: 1em;
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: 1.15;
+  border-radius: 3px;
+  color: $primary-color;
+  text-transform: uppercase;
+  transition: 
+    background-color $ease-main,
+    border-color $ease-main;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.button--primary {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  background-color: $brand;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.button--block {
+  display: block;
+  width: 100%;
+}
+
+.button--modal-form {
+  max-width: 235px;
+  margin-left: auto;
+  margin-right: auto;
+}

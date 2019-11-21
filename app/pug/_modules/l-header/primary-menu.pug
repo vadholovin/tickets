@@ -1,0 +1,30 @@
+ul.menu.menu--primary
+  li(
+    class= (pageClass=== 'index-page') ? "menu__item is-current" : "menu__item"
+  )
+    a.menu__link(href="index.html") Главная
+  li(
+    class= (pageClass=== 'desc-page') ? "menu__item is-current" : "menu__item"
+  )
+    a.menu__link(href="desc.html") Описание
+  li(
+    class="menu__item"
+  )
+    a.menu__link.js-dropdown-toggle(href="#") Интеграция
+    ul.menu-dropdown.js-dropdown
+      li.menu-dropdown__item
+        a.menu-dropdown__link(href="#") Битрикс 24
+      li.menu-dropdown__item
+        a.menu-dropdown__link(href="#") Trello
+  li(
+    class= (pageClass=== 'files-page') ? "menu__item is-current" : "menu__item"
+  )
+    a.menu__link(href="files.html") Скачать
+  li(
+    class= (pageClass=== 'products-page') ? "menu__item is-current" : "menu__item"
+  )
+    a.menu__link(href="products.html") Купить
+  li(
+    class= (pageClass=== 'contacts-page') ? "menu__item is-current" : "menu__item"
+  )
+    a.menu__link(href="contacts.html") Контакты

@@ -1,0 +1,112 @@
+-
+  var products = [
+    {
+      meta: 'Версия 1.2.4.1',
+      title: `Тикеты - <br> система учета задач в 1С`,
+      subtitle: `2 внешних подключения`,
+      cost: `БЕСПЛАТНО`,
+    },
+    {
+      meta: 'Версия 1.2.4.1',
+      title: `Тикеты - <br> система учета задач в 1С`,
+      subtitle: `10 внешних подключений, <br> программный ключ защиты, <br> 3 активации`,
+      cost: `8 500 рублей`,
+      features: {
+        first: `6 месяцев`,
+        second: `6 месяцев`,
+      }
+    },
+    {
+      meta: 'Версия 1.2.4.1',
+      title: `Тикеты - <br> система учета задач в 1С`,
+      subtitle: `25 внешних подключений, <br> программный ключ защиты, <br> 3 активации`,
+      cost: `15 000 рублей`,
+      features: {
+        first: `6 месяцев`,
+        second: `6 месяцев`,
+      }
+    },
+    {
+      meta: 'Версия 1.2.4.1',
+      title: `Тикеты - <br> система учета задач в 1С`,
+      subtitle: `50 внешних подключений, <br> программный ключ защиты, <br> 3 активации`,
+      cost: `25 000 рублей`,
+      features: {
+        first: `6 месяцев`,
+        second: `6 месяцев`,
+      }
+    },
+    {
+      meta: 'Версия 1.2.4.1',
+      title: `Тикеты - <br> система учета задач в 1С`,
+      subtitle: `100 внешних подключений, <br> программный ключ защиты, <br> 3 активации`,
+      cost: `40 000 рублей`,
+      features: {
+        first: `6 месяцев`,
+        second: `6 месяцев`,
+      }
+    },
+    {
+      meta: 'Версия 1.2.4.1',
+      title: `Тикеты - <br> система учета задач в 1С`,
+      subtitle: `250 внешних подключений, <br> программный ключ защиты, <br> 3 активации`,
+      cost: `60 000 рублей`,
+      features: {
+        first: `6 месяцев`,
+        second: `6 месяцев`,
+      }
+    },
+    {
+      title: `Тикеты - <br> система учета задач в 1С`,
+      subtitle: `Льготное продление технической поддержки и обновлений, при условии оплаты продления в течение месяца с момента завершения предыдущего периода технической поддержки`,
+      cost: `3 000 рублей`,
+      features: {
+        second: `6 месяцев`,
+      }
+    },
+    {
+      title: `Тикеты - <br> система учета задач в 1С`,
+      subtitle: `Стандартное продление технической поддержки <br> и обновлений)`,
+      cost: `5 000 рублей`,
+      features: {
+        second: `6 месяцев`,
+      }
+    },
+  ];
+
+.products
+  .container
+    .products__grid
+      each item, index in products
+        .products__cell
+          .products__tile
+            .products__tile-top
+              if item.meta
+                .products__meta= item.meta
+              h3.products__title!= item.title
+              p.products__subtitle!= item.subtitle
+              if item.features
+                .products__features
+                  if item.features.first
+                    .products__feature
+                      span.icon.icon-refresh
+                      | #{item.features.first}
+                  if item.features.second
+                    .products__feature
+                      span.icon.icon-settings
+                      | #{item.features.second}
+            .products__tile-foot
+              .products__option
+                label.products__option-label.form__check
+                  input.form__check-input.visuallyhidden(
+                    type="checkbox",
+                    name="products-option"
+                  )
+                  span.form__check-box
+                  | Включать в поставку аппаратный ключ вместо программной лицензии
+              .products__cost
+                | Цена: <span class="products__cost-value">#{item.cost}</span>
+              a.button.button--primary.button--block.js-open-modal(
+                href="#modal-order-" + (index + 1),
+                rel="modal:open"
+              ) Оформить заказ

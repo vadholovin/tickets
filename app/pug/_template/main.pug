@@ -1,0 +1,34 @@
+block variables
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <!--[if IE]>
+    meta(http-equiv='X-UA-Compatible', content="IE = edge")
+    <![endif]-->
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="keywords" content="")
+    link(rel="stylesheet" type='text/css' href="libs/slick/slick.css")
+    link(rel="stylesheet" type='text/css' href="libs/fancybox/jquery.fancybox.min.css")
+    link(rel="stylesheet" type='text/css' href="libs/jquery-modal/jquery.modal.min.css")
+    link(rel="stylesheet" type='text/css' href="css/styles.min.css")
+
+    <!--[if lt IE 9]>
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+    <![endif]-->
+  body(class=pageClass)
+    .wrapper
+      include ../_modules/l-header/header
+      .content
+        block content
+      include ../_modules/l-footer/footer
+      if pageClass === 'products-page'
+        include ../_modules/c-modals/modals
+    script(src="js/jquery-3.3.1.min.js")
+    script(src="libs/slick/slick.min.js")
+    script(src="libs/fancybox/jquery.fancybox.min.js")
+    script(src="libs/jquery-modal/jquery.modal.min.js")
+    script(src="js/main.js")
+    block script

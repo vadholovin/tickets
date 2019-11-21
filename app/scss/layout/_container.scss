@@ -1,0 +1,41 @@
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 36em) {
+  .container { max-width: 562px; }
+}
+
+@media (min-width: 48em) {
+  .container { max-width: 746px; }
+}
+
+@media (min-width: 62em) {
+  .container { max-width: 986px; }
+}
+
+@media (min-width: 80em) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+.container--fluid {
+  width: 100%;
+}
+
+
+.container-lg {
+  width: 100%;
+  max-width: 1276px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,107 @@
+-
+  var modals = [
+    {
+      title: `Тикеты - система учета задач в 1С`,
+      subtitle: `2 внешних подключения`,
+    },
+    {
+      title: `Тикеты - система учета задач в 1С`,
+      subtitle: `10 внешних подключений, программный ключ защиты, 3 активации`,
+    },
+    {
+      title: `Тикеты - система учета задач в 1С`,
+      subtitle: `25 внешних подключений, программный ключ защиты, 3 активации`,
+    },
+    {
+      title: `Тикеты - система учета задач в 1С`,
+      subtitle: `50 внешних подключений, программный ключ защиты, 3 активации`,
+    },
+    {
+      title: `Тикеты - система учета задач в 1С`,
+      subtitle: `100 внешних подключений, программный ключ защиты, 3 активации`,
+    },
+    {
+      title: `Тикеты - система учета задач в 1С`,
+      subtitle: `250 внешних подключений, программный ключ защиты, 3 активации`,
+    },
+    {
+      title: `Тикеты - система учета задач в 1С`,
+      subtitle: `Льготное продление технической поддержки и обновлений, при условии оплаты продления в течение месяца с момента завершения предыдущего периода технической поддержки`,
+    },
+    {
+      title: `Тикеты - система учета задач в 1С`,
+      subtitle: `Стандартное продление технической поддержки и обновлений)`,
+    },
+  ];
+
+each item, index in modals
+  .modal.js-modal(
+    id="modal-order-" + (index + 1)
+  )
+    .modal__content
+      .modal__head
+        p.modal__heading Оформление заказа
+        a.modal__close(
+          href="#close",
+          rel="modal:close",
+          role="button",
+          area-label="Закрыть попап"
+        )
+          span.icon.icon-cross
+      
+      form.modal__body.modal-form
+        .modal__title!= item.title
+        .modal__subtitle!= item.subtitle
+        .modal-form__option
+          label.modal-form__option-label.form__check
+            input.form__check-input.visuallyhidden(
+              type="checkbox",
+              name="order-option"
+            )
+            span.form__check-box
+            | Включать в поставку аппаратный ключ вместо программной лицензии
+        hr
+        .modal__title Укажите ваши контектные данные
+        p.modal-form__notes Поля, отмеченные * - обязательны к заполнению
+        .modal-form__row
+          .form-control__wrapper
+            input.form-control(
+              type="text",
+              name="order-company",
+              placeholder="Организация"
+            )
+          .form-control__wrapper
+            input.form-control(
+              type="text",
+              name="order-surname",
+              placeholder="Фамилия*"
+            )
+          .form-control__wrapper
+            input.form-control(
+              type="text",
+              name="order-name",
+              placeholder="Имя*"
+            )
+
+        .modal-form__row.modal-form__row--last
+          .form-control__wrapper
+            input.form-control(
+              type="text",
+              name="order-patronymic",
+              placeholder="Отчество"
+            )
+          .form-control__wrapper
+            input.form-control(
+              type="text",
+              name="order-email",
+              placeholder="E-mail*"
+            )
+          .form-control__wrapper
+            input.form-control(
+              type="text",
+              name="order-phone",
+              placeholder="Номер телефона"
+            )
+        button.button.button--primary.button--block.button--modal-form(
+          type="submit"
+        ) Оформить заказ

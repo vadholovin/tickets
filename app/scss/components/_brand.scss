@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #BRAND
+   ========================================================================== */
+
+.brand {
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.brand--primary {
+  display: flex;
+  align-items: center;
+  max-width: 390px;
+  margin-right: auto;
+
+  .brand-img {
+    width: 50px;
+
+    @media (min-width: 48em) {
+      width: 73px;
+    }
+  }
+
+  .brand-text {
+    display: none;
+    margin-left: 9px;
+    font-weight: 700;
+    font-size: 14px;
+    color: $darker;
+
+    @media (min-width: 24em) {
+      display: block;
+    }
+
+    @media (min-width: 62em) {
+      font-size: 18px;
+    }
+  }
+}

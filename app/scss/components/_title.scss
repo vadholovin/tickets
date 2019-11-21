@@ -1,0 +1,32 @@
+/* ==========================================================================
+   #TITLE
+   ========================================================================== */
+
+.title {
+  font-weight: 900;
+  font-size: rem(20);
+  line-height: 1.4;
+
+  @media (min-width: 48em) {
+    font-size: rem(26);
+  }
+}
+
+
+.title--benefits {
+  margin-bottom: 32px;
+}
+
+
+.title--files {
+  margin-bottom: 40px;
+}
+
+.title--contacts {
+  text-transform: uppercase;
+  margin-bottom: 28px;
+
+  @media (min-width: 62em) {
+    font-size: rem(28);
+  }
+}

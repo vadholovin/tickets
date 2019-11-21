@@ -1,0 +1,11 @@
+extends _template/main
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = 'index-page'
+
+block content
+  include _modules/s-hero/hero
+  include _pages/home/s-content/content
+  include _pages/home/s-benefits/benefits
+

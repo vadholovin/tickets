@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #HOME-CONTENT
+   ========================================================================== */
+
+.home-content {
+  margin-bottom: 40px;
+}
+
+.home-content .pure-g {
+  margin-left: -15px;
+  margin-right: -15px;
+  
+  > * {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.home-content__image {
+  text-align: center;
+
+  @media (min-width: 62em) {
+    text-align: right;
+  }
+}

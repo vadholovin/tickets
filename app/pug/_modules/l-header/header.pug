@@ -1,0 +1,37 @@
+header.header
+  .header-top
+    .container
+      .header-top__row
+        a.brand.brand--primary(href="index.html")
+          img.brand-img(
+            srcset="img/general/logo.png 1x, img/general/logo-2x.png 1.5x, img/general/logo-2x.png 2x, img/general/logo-2x.png 3x",
+            src="img/general/logo.png",
+            width="73", alt="")
+          .brand-text
+            | Тикеты - система учета задач в 1С
+            br
+            | (интеграция с Битрикс 24, Trello)
+
+        .header-info.header-info--primary
+          a.header-info__phone(href="tel:88009007090") 8 (800) 900-70-90
+          ul.header-info__list
+            li.header-info__item
+              a.header-info__link(href="mailto:support@tickets.com.ru")
+                | <span class="icon icon-email"></span> support@tickets.com.ru
+            li.header-info__item
+              a.header-info__link(href="")
+                | <span class="icon icon-skype"></span> @testname
+        button.hamburger.hamburger--spring(
+          type='button',
+          aria-label='Menu',
+          aria-controls='navigation'
+        )
+          span.hamburger-box
+            span.hamburger-inner
+  
+  .header-bottom
+    .container
+      nav.header-nav
+        include primary-menu
+  
+  include mobile-menu

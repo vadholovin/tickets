@@ -1,0 +1,56 @@
+/* ==========================================================================
+   #FORM
+   ========================================================================== */
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #fafafa;
+  border-radius: 0;
+  font-size: rem(14);
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: #fafafa;
+  box-shadow: none;
+
+  &::placeholder {
+    color: $light;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $border-color;
+  }
+}
+
+.form__check {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+}
+
+.form__check-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+}
+
+.form__check-input:checked ~ .form__check-box:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 11px;
+  background-image: url(../img/sprites/sprite.png);
+  background-repeat: no-repeat;
+  background-position: -4px -169px;
+}
+

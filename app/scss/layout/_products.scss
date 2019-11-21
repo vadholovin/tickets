@@ -1,0 +1,118 @@
+/* ==========================================================================
+   #PRODUCTS
+   ========================================================================== */
+
+.products {
+  margin-bottom: 50px;
+}
+
+.products__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -0.78125vw;
+  margin-right: -0.78125vw;
+}
+
+.products__cell {
+  width: 100%;
+  max-width: 265px;
+  margin-bottom: 20px;
+  padding-left: 0.78125vw;
+  padding-right: 0.78125vw;
+
+  @media (min-width: 36em) {
+    width: 50%;
+  }
+  
+  @media (min-width: 48em) {
+    width: 33.333333%;
+  }
+
+  @media (min-width: 62em) {
+    width: 25%;
+  }
+}
+
+.products__tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 15px 32px 15px;
+  color: $dark;
+  transition: box-shadow $ease-main;
+
+  &:hover {
+    box-shadow: 0 6px 6px  rgba(0, 0, 0, 0.25);
+  }
+}
+
+.products__tile-top {
+  flex: 1 1 auto;
+}
+
+.products__meta {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: rem(16);
+  color: $lighter;
+}
+
+.products__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.products__subtitle {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: rem(14);
+  line-height: 1.286;
+}
+
+.products__features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.products__feature {
+  display: flex;
+  align-items: center;
+  font-size: rem(14);
+  color: $light;
+  white-space: nowrap;
+}
+
+.products__feature .icon {
+  flex: none;
+  margin-right: 8px;
+}
+
+.products__cost {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: rem(14);
+}
+
+.products__cost-value {
+  font-weight: 700;
+  font-size: rem(18);
+  color: $highlight;
+  white-space: nowrap;
+}
+
+.products__option {
+  margin-bottom: 1rem;
+}
+
+.products__option-label {
+  font-size: rem(13);
+  line-height: 1.23;
+  color: $light;
+}

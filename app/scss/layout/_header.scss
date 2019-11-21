@@ -1,0 +1,77 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.header-top {
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+.header-top__row {
+  display: flex;
+  align-items: center;
+  height: 80px;
+
+  @media (min-width: 48em) {
+    height: 100px;
+  }
+}
+
+.header-info--primary {
+  display: none;
+
+  @media (min-width: 48em) {
+    display: block;
+  }
+}
+
+.header-info__phone {
+  display: block;
+  font-weight: 700;
+  font-size: rem(22);
+  color: $dark;
+  text-align: right;
+}
+
+
+.header-info--primary .header-info__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * + *{
+    margin-left: 30px;
+  }
+}
+
+.header-info__link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 500;
+
+  .icon {
+    margin-right: 9px;
+  }
+}
+
+.header-info--mobile .header-info__item {
+  
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.header-bottom {
+  display: none;
+
+  @media (min-width: 48em) {
+    display: block;
+  }
+}
+
+.contacts-page .header-nav {
+  border-bottom: 3px solid $brand;
+}
+
+
