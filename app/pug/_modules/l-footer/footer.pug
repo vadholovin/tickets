@@ -3,6 +3,14 @@ footer.footer
     .footer__inner
       ul.footer-actions
         li.footer-actions__item
-          a.link-dashed(href="#") Условия использования
+          a.link-dashed.js-open-modal(
+            href="#user-agreement",
+            rel="modal:open",
+            role="button",
+          ) Условия использования
         li.footer-actions__item
-          a.link-dashed(href="#") Лицензионное соглашение
+          a.link-dashed.js-open-modal(
+            href="#license-agreement",
+            rel="modal:open",
+            role="button",
+          ) Лицензионное соглашение

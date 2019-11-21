@@ -1,0 +1,34 @@
+.modal.js-modal#user-agreement
+  .modal__content
+    .modal__head
+      h2.modal__heading
+        | Пользовательское Соглашение
+      a.modal__close(
+        href="#close",
+        rel="modal:close",
+        role="button",
+        area-label="Закрыть попап"
+      )
+        span.icon.icon-cross
+
+    .modal__body
+      .modal__text-block
+        include ../s-agreement/user
+
+
+.modal.js-modal#license-agreement
+  .modal__content
+    .modal__head
+      h2.modal__heading
+        | Лицензионное соглашение на использование экземпляра программного продукта «Тикеты — система учета задач в 1С»
+      a.modal__close(
+        href="#close",
+        rel="modal:close",
+        role="button",
+        area-label="Закрыть попап"
+      )
+        span.icon.icon-cross
+
+    .modal__body
+      .modal__text-block
+        include ../s-agreement/license

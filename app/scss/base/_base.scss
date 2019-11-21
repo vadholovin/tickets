@@ -10,9 +10,13 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+
+  &.is-overflowed {
+    overflow: hidden;
+  }
 }
 
-html, body {
+body {
   min-height: 100vh;
   overflow-x: hidden;
 
