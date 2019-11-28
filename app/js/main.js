@@ -122,6 +122,9 @@ $(document).ready(function () {
     slidesToScroll: 1,
     infinite: true,
     dots: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: false,
     prevArrow: $('.js-hero-carousel-nav .hero-carousel__prev'),
     nextArrow: $('.js-hero-carousel-nav .hero-carousel__next'),
   });
